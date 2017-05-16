@@ -1,27 +1,44 @@
-function dEqualsVT(velocity, time){
-    return velocity*time;
-}
-function vEqualsDOverT(distance, time){
-    return distance/time;
-}
-function tEqualsDOverV(distance, velocity){
-    return distance/velocity;
-}
-function vFEqualsViPlusAT(vi, a, t){
-    return vi+(a*t);
-}
-function vIEqualsVfMinusAT(vf, a, t){
-    return vf-(a*t);
-}
-function aEqualsVOverT(velocity, time){
-    return velocity/time;
-}
-function vEqualsAT(acceleration, time){
-    return acceleration*time;
-}
-function tEqualsVOverA(velocity, acceleration){
-    return velocity/acceleration;
-}
-function dEqualsHalfATSquaredPlusViT(a,t,vi, t){
-    return ((a*t*t)+(vi*t))/2;
-}
+const motion = require('./motion');
+const energy = require('./energy');
+const readline = require('readline');
+
+
+const terminal = readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
+});
+
+terminal.question("What type of equation are you looking for?",function(str){
+  if(str == "motion"){
+    terminal.question("What are you trying to find?",function(str){
+      if(str == "distance"){
+        
+      }
+      else if(str == "acceleration"){
+
+      }
+      else if(str == "time"){
+
+      }
+      else if(str == "velocity"){
+
+      }
+    });
+  }
+  else if(str == "energy"){
+    terminal.question("What are you trying to find?",function(str){
+      if(str == "kinetic energy"){
+
+      }
+      else if(str == "mass"){
+
+      }
+      else if(str =="velocity"){
+
+      }
+    });
+  }
+  else{
+    console.log("I am not able to solve this type of equation yet.");
+  }
+});
