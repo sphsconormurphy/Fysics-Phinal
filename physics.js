@@ -29,10 +29,10 @@ terminal.question("What type of equation are you looking for?",function(str){
     terminal.question("What are you trying to find? (Type the word out)",function(str){
       str.toLowerCase();
       if(str == "distance"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.", function(strcma){
           convertToArray(strcma);
-          if(Number.isNan(strcma[2])){
+          if(Number.isNaN(strcma[2])){
             console.log(motion.distance(strcma[1],strcma[3]));
             end();
           }
@@ -43,7 +43,7 @@ terminal.question("What type of equation are you looking for?",function(str){
         });
       }
       else if(str == "acceleration"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.", function(strcma){
           convertToArray(strcma);
           console.log(motion.acceleration(strcma[1],strcma[3]));
@@ -51,10 +51,10 @@ terminal.question("What type of equation are you looking for?",function(str){
         });
       }
       else if(str == "time"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.", function(strcma){
           convertToArray(strcma);
-          if(Number.isNan(strcma[3])){
+          if(Number.isNaN(strcma[3])){
             console.log(motion.time(strcma[0],strcma[1]));
             end();
           }
@@ -65,10 +65,10 @@ terminal.question("What type of equation are you looking for?",function(str){
         });
       }
       else if(str == "velocity"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.", function(strcma){
           convertToArray(strcma);
-          if(Number.isNan(strcma[1])){
+          if(Number.isNaN(strcma[1])){
             console.log(motion.velocity(strcma[0],strcma[3]));
             end();
           }
@@ -84,7 +84,7 @@ terminal.question("What type of equation are you looking for?",function(str){
     terminal.question("What are you trying to find? (Type the word out)",function(str){
       str.toLowerCase();
       if(str == "kinetic energy"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.", function(strcma){
           convertToArray(strcma);
           console.log(energy.kineticEnergy(strcma[1],strcma[4]));
@@ -92,7 +92,7 @@ terminal.question("What type of equation are you looking for?",function(str){
         });
       }
       else if(str == "mass"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.",function(strcma){
           convertToArray(strcma);
           console.log(energy.mass(strcma[5],strcma[1]));
@@ -100,7 +100,7 @@ terminal.question("What type of equation are you looking for?",function(str){
         });
       }
       else if(str =="velocity"){
-        terminal.printOptions();
+        printOptions();
         terminal.question("Type your list now.",function(strcma){
           convertToArray(strcma);
           console.log(energy.v(strcma[5],strcma[4]));
