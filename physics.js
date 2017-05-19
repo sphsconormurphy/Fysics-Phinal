@@ -78,6 +78,10 @@ terminal.question("What type of equation are you looking for?",function(str){
           }
         });
       }
+      else{
+        console.log("The motion functions we can solve are distance, acceleration, time, velocity.")
+        end();
+      }
     });
   }
   else if(str == "energy"){
@@ -106,6 +110,10 @@ terminal.question("What type of equation are you looking for?",function(str){
           console.log(energy.v(strcma[5],strcma[4]));
           end();
         });
+      }
+      else{
+        console.log("The energy functions we can solve are kinetic energy, mass, and velocity.");
+        end();
       }
     });
   }
