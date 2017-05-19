@@ -4,9 +4,9 @@ var exports = module.exports = {};
 exports.kineticEnergy = function(m,v){
   return (m*v*v)/2;
 };
-exports.mass = function(ke, v){
+exports.mass = function(v,ke){
   return (2*ke)/(v*v);
 };
-exports.v = function(ke, m){
+exports.v = function(ke,m){
   return Math.sqrt((2*ke)/(m));
 };
